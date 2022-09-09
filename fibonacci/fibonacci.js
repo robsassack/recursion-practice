@@ -22,8 +22,9 @@ function fibsRec(n) {
     return 0;
   } else if (n === 1) {
     return 1;
+  } else {
+    return fibsRec(n-1) + fibsRec(n-2);
   }
-  return output.push(fibsRec(n-1));
 }
 
-console.log(fibs(20));
+console.log(fibsRec(20));
