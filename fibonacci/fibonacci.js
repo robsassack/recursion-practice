@@ -17,14 +17,13 @@ function fibs(n) {
 console.log(fibs(20));
 
 function fibsRec(n) {
-  let output = [];
   if (n === 0) {
-    return 0;
+    return [ 0 ];
   } else if (n === 1) {
-    return 1;
-  } else {
-    return fibsRec(n-1) + fibsRec(n-2);
+    return [0, 1];
   }
+  const output = fibsRec(n-1);
+  return [...output, output[n-1] + output[n-2]];
 }
 
 console.log(fibsRec(20));
